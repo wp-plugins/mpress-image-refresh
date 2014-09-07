@@ -1,10 +1,10 @@
 === mPress Image Refresh ===
 Contributors: woodent
-Donate link: http://micahwood.me/donate/
-Tags: mpress, image refresh, image rotation
+Donate link: http://wpscholar.dev/donate/
+Tags: mpress, image refresh, image rotation, random image, attachments
 Requires at least: 3.2
-Tested up to: 3.4.2
-Stable tag: 0.1
+Tested up to: 4.0
+Stable tag: 0.2
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -12,7 +12,7 @@ Show a fresh image on every page load.
 
 == Description ==
 
-The **mPress Image Refresh** plugin allows to you randomly display a new image on every page load.
+The **mPress Image Refresh** plugin allows you to randomly display a new image on every page load.
 
 = Why? =
 
@@ -60,9 +60,11 @@ that supports a more recent version of PHP.
 
 Once the plugin is installed and activated, go to any page or post where you want to have a fresh image display on each page load.  Just above the content editing area, click on the 'Add Media' icon to bring up the media uploader. Upload one or more images and click 'Save Changes' before exiting out of the popup window. Add the `[mpress_image_refresh]` shortcode in the content area where you want your image to appear.  Save your changes and check out the results!
 
-== Advanced Usage ==
+== Frequently Asked Questions ==
 
 The `[mpress_image_refresh]` shortcode supports a few attributes to give you more control over the results:
+
+* **attachment** - You can pass in a comma separated list of image IDs if you want to directly specify a set of images to use. Using this attribute invalidates the `post_id` and `not` attributes. Example: `[mpress_image_refresh attachment="19, 37, 940"]`
 
 * **post_id** - You can pass in the post ID to pull attached images from.  If your images are attached to another post, just provide the ID of that post and we will pull those images instead.  Example: `[mpress_image_refresh post_id="19"]`
 
@@ -76,8 +78,17 @@ Keep in mind that any of these attributes can be combined as needed.  Example: `
 
 == Changelog ==
 
+= 0.2 =
+
+* Updated plugin 'Tested Up To' tag to WordPress version 4.0
+* Added 'attachment' shortcode attribute for users who want to specify a set of images directly from the Media Library.
+
 = 0.1 =
 
 * Initial commit
 
 == Upgrade Notice ==
+
+= 0.2 =
+
+* You can now specify a set of image IDs using the 'attachment' shortcode attribute in order to load images directly from the Media Library.
